@@ -132,6 +132,6 @@ necessario installare SQL Server o scaricare file aggiuntivi.
 ---
 
 ## Autore
-**Matti Falchi**
+**Matti Falco**
 - LinkedIn: www.linkedin.com/in/mattia-falco-4b8b3033b
 - GitHub: https://github.com/Mattia2220/customer-sales-analytics-olist
