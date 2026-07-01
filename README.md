@@ -72,15 +72,23 @@ sono sotto-rappresentati per troncamento della raccolta, non per un reale calo d
 
 ### Clienti
 Il credit_card è il metodo di pagamento dominante (78,41% del valore, $12,4M), seguito da boleto
-(17,93%). La segmentazione RFM evidenzia una base clienti in gran parte "Hibernating" (4.785
-clienti) e "Lost" (3.439), a fronte di soli 60 "Champion" — un profilo tipico di un marketplace a
-bassissima frequenza di riacquisto, coerente con quanto noto sul dataset Olist.
+(17,93%) — il *boleto bancário* è un bollettino di pagamento tipico del sistema bancario
+brasiliano, pagabile in contanti, online o in qualsiasi sportello/edicola: è l'alternativa più
+diffusa alla carta di credito per chi non ne possiede una, molto comune in un mercato come quello
+brasiliano dove l'accesso al credito non è universale. La segmentazione RFM evidenzia una base
+clienti in gran parte "Hibernating" (4.785 clienti) e "Lost" (3.439), a fronte di soli 60
+"Champion" — un profilo tipico di un marketplace a bassissima frequenza di riacquisto, coerente
+con quanto noto sul dataset Olist.
 
 ### Consegne
 Il 7,81% degli ordini arriva in ritardo, con un tempo medio di consegna di 17,48 giorni. Il
-punteggio medio recensioni è 3,34/5. La categoria con le recensioni migliori è cds_dvds_musicals
-(4,43), quella con le peggiori è food_drink (3,90). A livello geografico gli stati del nord (AP,
-AM, AC) registrano i punteggi più alti, quelli più periferici (PE, BA, CE) i più bassi.
+punteggio medio recensioni è 3,34/5. Tempo di consegna e punteggio recensione sono chiaramente
+correlati in modo inverso: gli ordini puntuali ricevono in media 4,3/5, quelli in ritardo crollano
+a 2,6/5 — la puntualità della consegna è probabilmente il driver più forte della soddisfazione del
+cliente, più della categoria di prodotto stessa. La categoria con le recensioni migliori è
+cds_dvds_musicals (4,43), quella con le peggiori è food_drink (3,90). A livello geografico gli
+stati del nord (AP, AM, AC) registrano i punteggi più alti, quelli più periferici (PE, BA, CE) i
+più bassi — verosimilmente proprio per tempi di consegna più lunghi verso quelle aree.
 
 ### Venditori
 Su oltre 3.061 venditori attivi, lo stato di San Paolo (SP) domina nettamente il fatturato rispetto
