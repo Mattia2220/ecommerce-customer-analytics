@@ -31,6 +31,20 @@ Il progetto segue una pipeline in tre fasi: **Python → SQL (Architettura Medal
 CSV originali, il calcolo della segmentazione **RFM** (Recency, Frequency, Monetary) su
 `customer_unique_id` e la costruzione della logica di **cohort analysis**, poi caricati in SQL
 Server come tabelle di supporto per il layer Silver.
+Ogni cliente riceve uno score da 1 a 5 su Recency, Frequency e Monetary (5 = migliore: più
+recente, più frequente, più spesa). I segmenti sono assegnati applicando in ordine queste regole
+(la prima condizione soddisfatta vince):
+
+| Segmento | Regola | Significato |
+|---|---|---|
+| Champion | R = 5 e F = 5 | Cliente più recente e più frequente |
+| Loyal | F ≥ 4 | Ha acquistato spesso, a prescindere da quanto di recente |
+| At Risk | R ≤ 2 e F ≥ 3 | Era un cliente frequente ma non compra da tempo |
+| Lost | R = 1 e F = 1 | Un solo acquisto, molto tempo fa |
+| New Customer | R = 5 e F = 1 | Primo acquisto recente |
+| Promising | R ≥ 4 e F = 1 | Primo acquisto abbastanza recente |
+| Hibernating | R ∈ {2,3} e F = 1 | Un solo acquisto, in un periodo intermedio |
+| Other | nessuna delle precedenti | Casi residuali |
 
 Il **Bronze Layer** contiene il dato grezzo ingestito dai 9 CSV Olist senza trasformazioni, con
 controlli completi di qualità: valori nulli, duplicati, outlier su prezzo e pagamenti, inversioni
@@ -71,11 +85,8 @@ e $1,74M/mese), seguita da un calo marcato negli ultimi mesi (fino a $0,72M) dov
 sono sotto-rappresentati per troncamento della raccolta, non per un reale calo di mercato.
 
 ### Clienti
-Il credit_card è il metodo di pagamento dominante (78,41% del valore, $12,4M), seguito da boleto
-(17,93%) — il *boleto bancário* è un bollettino di pagamento tipico del sistema bancario
-brasiliano, pagabile in contanti, online o in qualsiasi sportello/edicola: è l'alternativa più
-diffusa alla carta di credito per chi non ne possiede una, molto comune in un mercato come quello
-brasiliano dove l'accesso al credito non è universale. La segmentazione RFM evidenzia una base
+Carta di credito è il metodo di pagamento dominante (78,41% del valore, $12,4M), seguito da bollettino bancario
+(17,93%). La segmentazione RFM evidenzia una base
 clienti in gran parte "Hibernating" (4.785 clienti) e "Lost" (3.439), a fronte di soli 60
 "Champion" — un profilo tipico di un marketplace a bassissima frequenza di riacquisto, coerente
 con quanto noto sul dataset Olist.
