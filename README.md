@@ -45,8 +45,7 @@ tutti i visual contemporaneamente: `gold.overview`, `gold.customers`, `gold.deli
 `gold.sellers`, `gold.cohort`.
 
 La **dashboard Power BI** è strutturata in 5 pagine — Overview, Clienti, Consegne, Venditori,
-Retention — con un tema custom dark disegnato per coerenza visiva con gli altri progetti del
-portfolio.
+Retention.
 
 ---
 
