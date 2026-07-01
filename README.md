@@ -67,8 +67,7 @@ Retention.
 Nel periodo analizzato lo store genera **$15,79M** di ricavi su **99,15K ordini**, per uno
 scontrino medio di **$154,12**. Le categorie più redditizie sono health_beauty ($1,44M) e
 watches_gifts ($1,30M). Il trend mensile mostra una forte tenuta tra gennaio e agosto (tra $1,24M
-e $1,74M/mese), seguita da un calo marcato negli ultimi mesi (fino a $0,72M) — è una caratteristica
-nota del dataset Olist, che raccoglie dati completi solo fino a settembre 2018: gli ultimi mesi
+e $1,74M/mese), seguita da un calo marcato negli ultimi mesi (fino a $0,72M) dovuto alla raccolta di dati completi solo fino a settembre 2018: gli ultimi mesi
 sono sotto-rappresentati per troncamento della raccolta, non per un reale calo di mercato.
 
 ### Clienti
