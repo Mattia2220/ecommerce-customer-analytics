@@ -49,7 +49,7 @@ Il **Bronze Layer** contiene il dato grezzo ingestito dai 9 CSV Olist senza tras
 controlli completi di qualità: valori nulli, duplicati, outlier su prezzo e pagamenti, inversioni
 temporali tra le date di consegna (~1.300 casi individuati).
 
-Il **Silver Layer** pulisce e tipizza il dato: distingue `customer_id` (per ordine) da
+Il **Silver Layer** pulisce il dato: distingue `customer_id` (per ordine) da
 `customer_unique_id` (persona reale, chiave per l'RFM), calcola i giorni di consegna e il flag di
 ritardo, traduce le categorie prodotto dal portoghese all'inglese.
 
