@@ -32,8 +32,7 @@ CSV originali, il calcolo della segmentazione **RFM** (Recency, Frequency, Monet
 `customer_unique_id` e la costruzione della logica di **cohort analysis**, poi caricati in SQL
 Server come tabelle di supporto per il layer Silver.
 Ogni cliente riceve uno score da 1 a 5 su Recency, Frequency e Monetary (5 = migliore: più
-recente, più frequente, più spesa). I segmenti sono assegnati applicando in ordine queste regole
-(la prima condizione soddisfatta vince):
+recente, più frequente, più spesa). I segmenti sono assegnati applicando in ordine queste regole:
 
 | Segmento | Regola | Significato |
 |---|---|---|
