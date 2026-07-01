@@ -113,8 +113,6 @@ generato da ogni coorte arriva dal mese dell'acquisto iniziale.
 ---
 
 ## 6. Prossimi Passi
-- Segnalare esplicitamente in dashboard gli ultimi mesi del dataset (raccolta troncata), per
-  evitare interpretazioni errate del trend di fine periodo
 - Analizzare la correlazione tra tempi di consegna e stato del cliente per prioritizzare interventi
   logistici per area geografica
 - Costruire un modello di propensione al riacquisto in Python per individuare i clienti a rischio
